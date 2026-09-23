@@ -90,8 +90,8 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
         run: |
          docker build \
-  --build-arg=REACT_APP_MOVIE_API_URL=http://accb7df2702f14efb8b16b358fae4565-508971630.us-east-1.elb.amazonaws.com \
-  --tag=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          --build-arg=REACT_APP_MOVIE_API_URL=http://accb7df2702f14efb8b16b358fae4565-508971630.us-east-1.elb.amazonaws.com \
+          --tag=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Install kubectl
