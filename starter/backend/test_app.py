@@ -26,3 +26,4 @@ def test_movies_endpoint_returns_valid_data():
         assert "title" in data["movies"][0]
 # test backend CI trigger
 # trigger CD
+# trigger CD
